@@ -88,7 +88,7 @@
     line-height: 180px;
     width: 30%;
     height: 200px;
-    background-image: url(../1.jpg);
+    background-image: url(../pics/1.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     border-radius: 20px; }
@@ -102,7 +102,7 @@
         line-height: 50px;
         width: 70%;
         height: 150px;
-        background-image: url(../1.jpg);
+        background-image: url(../pics/1.jpg);
         background-size: 100% auto;
         background-repeat: no-repeat;
         border-radius: 20px; } }
@@ -116,7 +116,7 @@
     line-height: 50px;
     width: 30%;
     height: 150px;
-    background-image: url(../2.jpg);
+    background-image: url(../pics/2.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     border-radius: 20px; }
@@ -130,7 +130,7 @@
         line-height: 50px;
         width: 70%;
         height: 150px;
-        background-image: url(../2.jpg);
+        background-image: url(../pics/2.jpg);
         background-size: 100% auto;
         background-repeat: no-repeat;
         border-radius: 20px; } }
@@ -143,7 +143,7 @@
     line-height: 200px;
     width: 30%;
     height: 200px;
-    background-image: url(../3.jpg);
+    background-image: url(../pics/3.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     border-radius: 20px; }
@@ -157,7 +157,7 @@
         line-height: 50px;
         width: 70%;
         height: 150px;
-        background-image: url(../3.jpg);
+        background-image: url(../pics/3.jpg);
         background-size: 100% auto;
         background-repeat: no-repeat;
         border-radius: 20px; } }
@@ -170,7 +170,7 @@
     line-height: 200px;
     width: 30%;
     height: 200px;
-    background-image: url(../4.jpg);
+    background-image: url(../pics/4.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     border-radius: 20px; }
@@ -184,13 +184,13 @@
         line-height: 200px;
         width: 70%;
         height: 200px;
-        background-image: url(../4.jpg);
+        background-image: url(../pics/4.jpg);
         background-size: 100% auto;
         background-repeat: no-repeat;
         border-radius: 20px; } }
 
 .photo {
-  background-image: url(../back.jpg);
+  background-image: url(../pics/back.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat; }
   .photo .text {
@@ -240,7 +240,7 @@
     font-size: 25px;
     text-align: center; }
   .music .hard-R p {
-    float: right;
+    float: none;
     margin-left: 0%;
     width: 45%;
     display: flex;
@@ -250,5 +250,18 @@
     font-size: 25px;
     text-align: center;
     padding: 15px 0px; }
+
+.tabs {
+  margin: 10% 0%; }
+  .tabs .text {
+    float: left;
+    font-size: 25px;
+    width: 15%;
+    height: auto;
+    margin-left: 35%;
+    padding: 4% 0%; }
+  .tabs .down_img img {
+    width: 15%;
+    height: auto; }
 
 /*# sourceMappingURL=style.css.map */

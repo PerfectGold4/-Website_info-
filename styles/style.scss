@@ -67,21 +67,21 @@
 	line-height: 200px;
     text-align: center;
 	.base{
-		@include main(left, url(../1.jpg), 30%, 180px, 200px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../1.jpg), 70%, 50px, 150px, 0% 0%);}
+		@include main(left, url(../pics/1.jpg), 30%, 180px, 200px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../pics/1.jpg), 70%, 50px, 150px, 0% 0%);}
 	}
 	.more{
 		padding-top: 50px;
-		@include main(right, url(../2.jpg), 30%, 50px, 150px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../2.jpg), 70%, 50px, 150px, 0% 0%);}
+		@include main(right, url(../pics/2.jpg), 30%, 50px, 150px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../pics/2.jpg), 70%, 50px, 150px, 0% 0%);}
 	}
 	.mus{
-		@include main(left, url(../3.jpg), 30%, 200px, 200px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../3.jpg), 70%, 50px, 150px, 0% 0%);}
+		@include main(left, url(../pics/3.jpg), 30%, 200px, 200px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../pics/3.jpg), 70%, 50px, 150px, 0% 0%);}
 	}
 	.ex{
-		@include main(none, url(../4.jpg), 30%, 200px, 200px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../4.jpg), 70%, 200px, 200px, 0% 0%);}
+		@include main(none, url(../pics/4.jpg), 30%, 200px, 200px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../pics/4.jpg), 70%, 200px, 200px, 0% 0%);}
 	}}
 .photo {
 	.text{
@@ -97,7 +97,10 @@
 		padding: 0px 5% 70px 5%;
 		text-align: right;
 	}
-	@include back(url(../back.jpg));}
+	@include back(url(../pics/back.jpg));}
+.maybe {
+	
+}
 .music {
 		width: 90%;
 		margin: 5% 0%;
@@ -120,7 +123,23 @@
 		}
 		.hard-R {
 			p{
-				@include music (right, 0%);
+				@include music (none, 0%);
 				padding: 15px 0px;
 			}
 		}}
+.tabs {
+	margin: 10% 0%;
+	.text{
+		float: left;
+		font-size: 25px;
+		width: 15%;
+		height: auto;
+		margin-left: 35%;
+		padding: 4% 0%;}
+	.down_img{
+		img{
+			width: 15%;
+			height: auto;
+		}
+	}
+}
