@@ -1,0 +1,126 @@
+@mixin back($back-img) {
+	background-image: $back-img;
+	background-size: 100% auto;
+	background-repeat:no-repeat;}
+@mixin head_part ($adm, $pad) {
+	font-size: 18px;
+	font-family: Arial,Helvetica,sans-serif;
+	display: flex;
+	float: left;
+	margin-right: 4%;
+	padding: $pad;
+	margin-right: $adm;}
+@mixin main ($float, $back, $wid, $line, $high, $marg) {
+	font: small-caps bold 45px/1.5 Arial,Helvetica,sans-serif;
+	color: white;
+
+	float: $float;
+    display: inline-block;
+	margin: $marg;
+
+	line-height: $line;
+
+    width: $wid;
+    height: $high;
+
+	background-image: $back;
+	background-size: 100% auto;
+	background-repeat:no-repeat;
+
+	border-radius: 20px;
+    }
+@mixin music ($float, $mar,) {
+	float: $float;
+	margin-left: $mar;
+	width: 45%;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+	line-height: 35px;
+	font-size: 25px;
+	text-align: center;}
+.head {
+	display: flex;	
+	.img {
+		@include head_part(40%, 0 0);
+		@media (max-width: 1090px) {@include head_part(10%, 0 0);}
+		height: 100px;
+		margin-left: 4%;
+	}
+	.inf-h{
+		@include head_part(0px, 2.5% 2%);
+		@media (max-width: 1090px) {@include head_part(0px, 8% 2%);}
+		margin-left: 8%;
+	}
+	.bl-h{
+		@include head_part(0px, 2.5% 2%);
+		@media (max-width: 1090px) {@include head_part(0px, 8% 2%);}
+	}
+	.help-h{
+		@include head_part(0px, 2.5% 2%);
+		@media (max-width: 1090px) {@include head_part(0px, 8% 2%);}
+	}}
+.undo_head {
+	height: 2px;
+	background: black;}
+.main_inf{
+	line-height: 200px;
+    text-align: center;
+	.base{
+		@include main(left, url(../1.jpg), 30%, 180px, 200px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../1.jpg), 70%, 50px, 150px, 0% 0%);}
+	}
+	.more{
+		padding-top: 50px;
+		@include main(right, url(../2.jpg), 30%, 50px, 150px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../2.jpg), 70%, 50px, 150px, 0% 0%);}
+	}
+	.mus{
+		@include main(left, url(../3.jpg), 30%, 200px, 200px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../3.jpg), 70%, 50px, 150px, 0% 0%);}
+	}
+	.ex{
+		@include main(none, url(../4.jpg), 30%, 200px, 200px, 5% 10%);
+		@media (max-width: 1090px) {@include main(none, url(../4.jpg), 70%, 200px, 200px, 0% 0%);}
+	}}
+.photo {
+	.text{
+		padding: 70px 5% 10px 5%;
+		width: 90%;
+		font: italic bold 35px/1.5 'Bona Nova', serif;;
+		color: white;
+	}
+	.author {
+		width: 90%;
+		font: italic 30px/1.5 'Bona Nova', serif;;
+		color: white;
+		padding: 0px 5% 70px 5%;
+		text-align: right;
+	}
+	@include back(url(../back.jpg));}
+.music {
+		width: 90%;
+		margin: 5% 0%;
+		.ease-L {
+			p{
+				@include music (left, 10%);
+				padding: 36px 0px;
+			}
+		}
+		.ease-R {
+			img{
+				@include music (right, 0%);
+			}
+		}
+	
+		.hard-L {
+			img{
+				@include music (left, 10%);
+			}
+		}
+		.hard-R {
+			p{
+				@include music (right, 0%);
+				padding: 15px 0px;
+			}
+		}}
