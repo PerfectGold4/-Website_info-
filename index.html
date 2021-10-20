@@ -5,17 +5,22 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/jquery-ui.js"></script>
+	<script src="Transit.js"></script><!--НЕ МОЙ СКРИПТ-->
 </head>
 <body>
+		<div class="hide">
+			<div class="for_inf"><p>Сайт создан для индивидуального итогового школьного проекта</p></div>
+			<div class="for_help"><p>Эл. почта:<br><a href="mailto:ilushavolkov@mail.ru">ilushavolkov@mail.ru</a></p></div>
+		</div>
 		
 		<div class="head">
 			<div class="img"><img src="pics\logo.png"></div>
-			<div class="inf-h">Инфо</div>
-			<div class="bl-h">Блала</div>
-			<div class="help-h">Поддержка</div>
+			<div class="inf-h"><p class="i">О проекте</p></div>
+			<div class="help-h"><p class="h">Контакты</p></div>
 		</div>
 
 		<div class="undo_head"></div>
@@ -23,16 +28,16 @@
 		<article class="main_inf">
 				<p class="base">базовые навыки</p>
 				<p class="more">углубленный уровень</p>
-				<p class="mus">написание кавера</p>
+				<p class="cov">написание кавера</p>
 				<p class="ex">упражнения</p>
 		</article>
 
-		<article class="photo">
-			<p class="text">"Я думаю, что получить музыкальное образование не главное для того чтобы создавать."<p> 
-			<p class="author">-Виктор Сизов</p>
+		<article class="maybe">
+			<div class="lowdown">
+				<p class="header">О чём?</p>
+				<p class="all_the_text">Задачей данного проекта является предоставление возможности обучиться игре на гитаре в домашних условиях. В разделах используются табулатуры, которые можно просмотреть отдельно по ссылке ниже. Проект также включает раздел с упражнениями для совершенствования своих навыков и список рекомендованной музыки для тех, кто ещё только начинает приобщаться к музыкальному искусству. Информация, использующаяся в разделах, получена в результате года обучения с репетитором, поэтому знания основаны на личном опыте.</p>
+			</div>
 		</article>
-
-		<article class="maybe"><img src="pics/may.jpg"></article>
 
 		<article class="music">
 			<div class="ease-L">
@@ -50,13 +55,17 @@
 		</article>
 
 		<article class="tabs">
-			<div class="text">Файл с табами, используемых во время обучения:</div>
-			<div class="down_img"><img src="pics/down.jpg"></div>
-		</article>
-
-		<article class="my_mus">
+			<div class="text">Файл с табами, использующихся во время обучения:</div>
 			
+
+
+			<div class="down_img"><a href="ссылка" download><img src="pics/down.jpg"></a></div>
+			<!--по идее должно происходить скачивание файла-->
+		
+
+
 		</article>
 
 </body>
+<script type="text/javascript" src="code.js"></script>
 </html>

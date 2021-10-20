@@ -1,7 +1,15 @@
+/*@keyframes swing_left{100%{transform:translate(0px,0), opacity:1}};*/
 @mixin back($back-img) {
 	background-image: $back-img;
 	background-size: 100% auto;
 	background-repeat:no-repeat;}
+@mixin hide($f) {
+	font-size: 12px;
+	font-family: Arial,Helvetica,sans-serif;
+	float: $f;
+	height: 100px;
+	visibility: hidden;
+	cursor: default;}
 @mixin head_part ($adm, $pad) {
 	font-size: 18px;
 	font-family: Arial,Helvetica,sans-serif;
@@ -10,25 +18,16 @@
 	margin-right: 4%;
 	padding: $pad;
 	margin-right: $adm;}
-@mixin main ($float, $back, $wid, $line, $high, $marg) {
+@mixin main ($float, $line, $high) {
 	font: small-caps bold 45px/1.5 Arial,Helvetica,sans-serif;
 	color: white;
-
 	float: $float;
     display: inline-block;
-	margin: $marg;
-
+	margin: 5% 10%;
 	line-height: $line;
-
-    width: $wid;
+    width: 30%;
     height: $high;
-
-	background-image: $back;
-	background-size: 100% auto;
-	background-repeat:no-repeat;
-
-	border-radius: 20px;
-    }
+	border-radius: 20px;}
 @mixin music ($float, $mar,) {
 	float: $float;
 	margin-left: $mar;
@@ -39,26 +38,39 @@
 	line-height: 35px;
 	font-size: 25px;
 	text-align: center;}
+
+.hide {
+	z-index: 99999;
+	position: fixed;
+	display: flex;
+	margin: 4% 0 0 69%;
+	text-align: center;
+	.for_inf {
+		@include hide(left);
+		@include back(url(../pics/sos.png));
+		margin: 0 18% 0 3%;
+		p{padding: 20px 15px 0px 15px;}}
+	.for_help {
+		@include hide(none);
+		@include back(url(../pics/sas.png));
+		p{padding: 35px 15px 0px 15px;}}}
 .head {
 	display: flex;	
 	.img {
 		@include head_part(40%, 0 0);
-		@media (max-width: 1090px) {@include head_part(10%, 0 0);}
 		height: 100px;
 		margin-left: 4%;
 	}
 	.inf-h{
 		@include head_part(0px, 2.5% 2%);
-		@media (max-width: 1090px) {@include head_part(0px, 8% 2%);}
-		margin-left: 8%;
-	}
-	.bl-h{
-		@include head_part(0px, 2.5% 2%);
-		@media (max-width: 1090px) {@include head_part(0px, 8% 2%);}
-	}
+		margin-left: 18%;
+		p:hover {cursor: pointer;
+			text-decoration: underline;};}
 	.help-h{
 		@include head_part(0px, 2.5% 2%);
-		@media (max-width: 1090px) {@include head_part(0px, 8% 2%);}
+		margin-left: 3%;
+		p:hover {cursor: pointer;
+			text-decoration: underline;};
 	}}
 .undo_head {
 	height: 2px;
@@ -67,61 +79,75 @@
 	line-height: 200px;
     text-align: center;
 	.base{
-		@include main(left, url(../pics/1.jpg), 30%, 180px, 200px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../pics/1.jpg), 70%, 50px, 150px, 0% 0%);}
-	}
+		@include main(left, 180px, 200px);
+		@include back(url(../pics/1.jpg));
+	}:hover {cursor: pointer;};
 	.more{
 		padding-top: 50px;
-		@include main(right, url(../pics/2.jpg), 30%, 50px, 150px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../pics/2.jpg), 70%, 50px, 150px, 0% 0%);}
-	}
-	.mus{
-		@include main(left, url(../pics/3.jpg), 30%, 200px, 200px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../pics/3.jpg), 70%, 50px, 150px, 0% 0%);}
-	}
+		@include main(right, 50px, 150px);
+		@include back(url(../pics/2.jpg));
+	}:hover {cursor: pointer;};
+	.cov{
+		@include main(left, 200px, 200px);
+		@include back(url(../pics/3.jpg));
+	}:hover {cursor: pointer;};
 	.ex{
-		@include main(none, url(../pics/4.jpg), 30%, 200px, 200px, 5% 10%);
-		@media (max-width: 1090px) {@include main(none, url(../pics/4.jpg), 70%, 200px, 200px, 0% 0%);}
-	}}
-.photo {
-	.text{
-		padding: 70px 5% 10px 5%;
-		width: 90%;
-		font: italic bold 35px/1.5 'Bona Nova', serif;;
-		color: white;
-	}
-	.author {
-		width: 90%;
-		font: italic 30px/1.5 'Bona Nova', serif;;
-		color: white;
-		padding: 0px 5% 70px 5%;
-		text-align: right;
-	}
-	@include back(url(../pics/back.jpg));}
+		@include main(none, 200px, 200px);
+		@include back(url(../pics/4.jpg));
+	}:hover {cursor: pointer;};}
 .maybe {
-	
-}
+	.lowdown{
+		@include back(url(../pics/ocr.jpg));
+		justify-content: center;
+		margin: 0% 5%;
+
+		.header{
+			font: bold 45px/1.5 Arial,Helvetica,sans-serif;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			vertical-align: middle;
+			text-align: center;
+			float: left;
+
+		}
+		.all_the_text{
+			font: bold 20px/1.5 Arial,Helvetica,sans-serif;
+			width: 40%;
+			display: flex;
+			justify-content: center;
+			vertical-align: middle;
+			padding-top: 20px;
+			padding: 10% 0 8% 0;
+		}
+	}}
 .music {
 		width: 90%;
 		margin: 5% 0%;
 		.ease-L {
+			transform:translate(140px); opacity:0;
 			p{
 				@include music (left, 10%);
-				padding: 36px 0px;
+				padding: 34px 0px;
+
 			}
 		}
 		.ease-R {
+			transform:translate(140px); opacity:0;
 			img{
 				@include music (right, 0%);
+
 			}
 		}
 	
 		.hard-L {
+			transform:translate(-140px); opacity:0;
 			img{
 				@include music (left, 10%);
 			}
 		}
 		.hard-R {
+			transform:translate(-140px); opacity:0;
 			p{
 				@include music (none, 0%);
 				padding: 15px 0px;
@@ -138,8 +164,8 @@
 		padding: 4% 0%;}
 	.down_img{
 		img{
+			transform: scale(0.5);
 			width: 15%;
 			height: auto;
 		}
-	}
-}
+	}}
