@@ -6,15 +6,15 @@ $(function(){
 	 	.mouseenter(function(){
 	 		$('.for_inf')
 	 			.css('visibility', 'visible')
-	 			.mouseenter(function(){$('.for_inf').css('visibility', 'visible')})
-	 			.mouseleave(function(){$('.for_inf').css('visibility', 'hidden')})})
+	 			.mouseenter(function(){$('.for_inf').css('visibility', 'visible');$('.i').css({'text-decoration': 'underline'})})
+	 			.mouseleave(function(){$('.for_inf').css('visibility', 'hidden');$('.i').css({'text-decoration': 'none'})})})
 	 	.mouseleave(function(){$('.for_inf').css('visibility', 'hidden')});
 	 $('.h')
 	 	.mouseenter(function(){
 	 		$('.for_help')
 	 		.css('visibility', 'visible')
-	 		.mouseenter(function(){$('.for_help').css('visibility', 'visible')})
-	 		.mouseleave(function(){$('.for_help').css('visibility', 'hidden')})})
+	 		.mouseenter(function(){$('.for_help').css('visibility', 'visible');$('.h').css({'text-decoration': 'underline'})})
+	 		.mouseleave(function(){$('.for_help').css('visibility', 'hidden');$('.h').css({'text-decoration': 'none'})})})
 	 	.mouseleave(function(){$('.for_help').css('visibility', 'hidden')});
 
 	 $('.base').click(function() { location.href = 'main/base.html'});
@@ -38,10 +38,10 @@ $(function(){
 	});
 	$('img','.down_img')
 		.hover(function(){
-			$('img','.down_img').transition({'rotate':'360deg', 'scale':'1'}, {duration: 500})
+			$('img','.down_img').transition({'scale':'1'}, {duration: 500})
 		})
 		.mouseout(function(){
-			$('img','.down_img').transition({'rotate':'-360deg', 'scale':'0.5'}, {duration: 500})
+			$('img','.down_img').transition({'scale':'0.5'}, {duration: 500})
 		})
 
 	});
