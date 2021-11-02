@@ -36,7 +36,8 @@
 	vertical-align: middle;
 	line-height: 35px;
 	font-size: 25px;
-	text-align: center;}
+	text-align: center;
+	cursor: default;}
 
 .hide {
 	z-index: 99999;
@@ -108,6 +109,7 @@
 			vertical-align: middle;
 			text-align: center;
 			float: left;
+			cursor: default;
 
 		}
 		.all_the_text{
@@ -118,6 +120,7 @@
 			vertical-align: middle;
 			padding-top: 20px;
 			padding: 10% 0 8% 0;
+			cursor: default;
 		}
 	}}
 .music {
@@ -160,7 +163,8 @@
 		width: 15%;
 		height: auto;
 		margin-left: 35%;
-		padding: 4% 0%;}
+		padding: 4% 0%;
+		cursor: default;}
 	.down_img{
 		img{
 			transform: scale(0.5);

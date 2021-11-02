@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Guitar Study</title>
+	<link rel="shortcut icon" href="../pics/ind/logo.png">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="../styles/default.css">
@@ -12,49 +13,53 @@
 </head>
 <body>
 
-	<div class="hide">
-		<div class="back"></div>
-		<div class="up"></div>
-	</div>
-
 	<header>
-		<a class="hide" href="#"><img src="../pics/up.png"></a>
-		<p class="head">Базовые навыки</p>
-		<a class="back" href="../index.html"><img src="../pics/back.png"></a>
-		<p class="text">Самое простое может показаться чересчур сложным, главное не спешить. Следует изучать информацию последовательно, по пунктам в оглавлении. Не получится научиться за пару минут, лишь через ежедневную практику и терпение можно добиться реальных результатов и начать играть.</p>
+		<div class="hide"><img src="../pics/base/up.png"></div>
+		<div class="header">
+			<p class="head">Базовые навыки</p>
+			<img class="back" src="../pics/base/back.png">
+		</div>
+		<article>
+			<p class="text">Самое простое может показаться чересчур сложным, главное не спешить. Следует изучать информацию последовательно, по пунктам в оглавлении. Не получится научиться за пару минут, лишь через ежедневную практику и терпение можно добиться реальных результатов и начать играть.</p>
+		</article>
 	</header>
 
 	<div class="cont">
-		<span>1.</span><p id="1"> Положение рук и постановка</p>
-		<span>2.</span><p id="2"> Первые мелодии</p>
-		<span>3.</span><p id="3"> Первые аккорды</p>
-		<span>4.</span><p id="4"> Упражнение хроматизм</p>
-		<span>5.</span><p id="5"> Звезда по имени солнце</p>
-		<span>6.</span><p id="6"> Упражнение на перебор</p>
-		<span>7.</span><p id="7"> На заре ты её не буди</p>
-		<span>8.</span><p id="8"> Кукла колдуна</p>
-		<span>9.</span><p id="9"> Барре</p>
-		<span>10.</span><p id="10"> Where is my mind</p>
-		<span>11.</span><p id="11"> Behind blue eyes</p>
-		<span>12.</span><p id="12"> Still loving you</p>
+		<div class="elem"><span>1.</span><a href="#1" > Положение рук и постановка</a></div>
+		<div class="elem"><span>2.</span><a href="#2" > Первые мелодии</a></div>
+		<div class="elem"><span>3.</span><a href="#3" > Первые аккорды</a></div>
+		<div class="elem"><span>4.</span><a href="#4" > Упражнение хроматизм</a></div>
+		<div class="elem"><span>5.</span><a href="#5" > Звезда по имени солнце</a></div>
+		<div class="elem"><span>6.</span><a href="#6" > Упражнение на перебор</a></div>
+		<div class="elem"><span>7.</span><a href="#7" > На заре ты её не буди</a></div>
+		<div class="elem"><span>8.</span><a href="#8" > Кукла колдуна</a></div>
+		<div class="elem"><span>9.</span><a href="#9" > Барре</a></div>
+		<div class="elem"><span>10.</span><a href="#10"> Where is my mind</a></div>
+		<div class="elem"><span>11.</span><a href="#11"> Behind blue eyes</a></div>
+		<div class="elem"><span>12.</span><a href="#12"> Still loving you</a></div>
 	</div>
 
-	<article>
+	<section>
 		<div class="theme">
-			<p class="article_head">Положение рук и постановка</p>
+			<p class="article_head" id="1">Положение рук и постановка</p>
 			<div class="content">
 				<p>Есть над чем задуматься: действия представителей оппозиции лишь добавляют фракционных разногласий и объективно рассмотрены соответствующими инстанциями. Учитывая ключевые сценарии поведения, глубокий уровень погружения прекрасно подходит для реализации новых принципов формирования материально-технической и кадровой базы. В своём стремлении улучшить пользовательский опыт мы упускаем, что независимые государства представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.</p>
 				<img src="../pics/base/1.png">
 			</div>
 		</div>
 		<div class="theme">
-			<p class="article_head">Положение рук и постановка</p>
+			<p class="article_head" id="2">Положение рук и постановка</p>
 			<div class="content">
 				<p>Есть над чем задуматься: действия представителей оппозиции лишь добавляют фракционных разногласий и объективно рассмотрены соответствующими инстанциями. Учитывая ключевые сценарии поведения, глубокий уровень погружения прекрасно подходит для реализации новых принципов формирования материально-технической и кадровой базы. В своём стремлении улучшить пользовательский опыт мы упускаем, что независимые государства представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.</p>
 				<img src="../pics/base/1.png">
 			</div>
 		</div>
-	</article>
+	</section>
 	<script type="text/javascript" src="../js_code/for_main.js"></script>
+	<script type="text/javascript">	
+		$('.head').addClass('pink-text');
+		$('.cont').addClass('pink-back');
+		$('article, section').addClass('pink-bord');
+	</script>
 </body>
 </html>

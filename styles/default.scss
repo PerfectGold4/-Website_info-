@@ -1,51 +1,82 @@
-$primary_color: #DB7093;
-$primary_color_less: rgba(199, 21, 133, 0.5);
+.pink-text{color:#DB7093;}
+.pink-bord{border-color:#DB7093;}
+.pink-back{background-color: rgba(219, 112, 147, 0.5);}
+
+.blue-text{color:#4682B4;}
+.blue-bord{border-color:#4682B4;}
+.blue-back{background-color: rgba(70, 130, 180, 0.5);}
+
+.green-text{color:#9ACD32;}
+.green-bord{border-color:#9ACD32;}
+.green-back{background-color: rgba(154, 205, 50, 0.5);}
+
 .hide{
 	z-index: 99999;
 	position: fixed;
-	opacity:0;
-	img{
-		width: 15%;
-		margin: 130% 0% 0% 270%;
-	}
+    right: 0;
+    bottom: 0;
+    img{
+    	margin: 0 17px 15px 0;
+    	cursor: pointer;
+    }
 }
-.head{
-	font: bold 50px/1.5 Arial,Helvetica,sans-serif;
-	text-align: center;
-	color: $primary_color;
-	margin: 30px 0 15px 37%;
-	float: left;
-}
-.back{
+.header{
 	display: flex;
-	justify-content: flex-end;
-	img{
-		width: 10%;
-		margin: 35px 5% 45px 0;
+	align-items: flex-start;
+	.head{
+		font: bold 50px/1.5 Arial,Helvetica,sans-serif;
+		text-align: center;
+		margin: 30px 28% 15px 37%;
+		float: left;
+		cursor: default;
+	}
+	.back{
+		margin-top: 2%;
+		width: 5%;
+		cursor: pointer;
 	}
 }
+
+article{
+	margin: 0 5%;
+	border: 3px solid;}
+
 .text{
+	
 	font: 25px/1.5 Arial,Helvetica,sans-serif;
 	text-align: center;
-	margin: 0 5%;
-	border: 3px solid $primary_color;
+	
+	cursor: default;
+	
 }
 .cont{
 	font: 18px/2 Arial,Helvetica,sans-serif;
 	margin: 30px 0 25px 10%;
-	background-color: $primary_color_less;
 	width: 30%;
 	padding: 10px 0 10px 20px;
-	span{
+	.elem{
 		display: flex;
-		float: left;
-		width: 6%;
+		float: none;
+		a{
+			display: inline-block;
+			color: black;
+			text-decoration: none;
+		}
+		a:hover{text-decoration: underline}
+		span{
+			display: flex;
+			float: left;
+			width: 6%;
+			cursor: default;
+		}
 	}
 }
-article{
-	border: 3px dashed $primary_color;
+
+section{
+	border: 3px dashed;
 	margin: 0 8% 5% 8%;
 	width: auto;
+	cursor: default;
 	.theme{
 		.article_head{
 			font: bold 40px/1.5 Arial,Helvetica,sans-serif;
@@ -63,3 +94,4 @@ article{
 		}
 	}
 }
+

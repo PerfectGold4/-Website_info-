@@ -1,13 +1,30 @@
 $(function() {
-	$(document).ready(function(){
-	    setTimeout(function(){
-	        window.scrollTo(0, 0);
-	    }, 1);
-	    if ($(window).scrollTop()=0) {$('.hide').css('opacity':'0')}
+
+		$('.hide').fadeOut(0);
+
 		$(window).scroll(function(){
-			if($(window).scrollTop()>150){
-				$('.hide').transition({'opacity':'1'}, {duration: 1000});
+			if ($(this).scrollTop() > 350){
+				$('.hide').fadeIn();
+			} else{
+				$('.hide').fadeOut();
 			}
+			});
+		
+		$('.hide').click(function (){
+			$('body,html').animate({
+				scrollTop:0
+			}, 800);
+			return false;
 		});
+
+		$('.back')
+			.click(function(){
+				location.href = '../index.html'
+			})
+
+		$(document).ready(function(){
+	    	setTimeout(function(){
+	        	window.scrollTo(0, 0);
+	    }, 1);
 	});
 });
