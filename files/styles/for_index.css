@@ -1,0 +1,241 @@
+.hide {
+  z-index: 99999;
+  position: fixed;
+  display: flex;
+  margin: 4% 0 0 69%;
+  text-align: center; }
+  .hide .for_inf {
+    font-size: 12px;
+    font-family: Arial,Helvetica,sans-serif;
+    float: left;
+    height: 100px;
+    visibility: hidden;
+    cursor: default;
+    background-image: url(../pics/ind/sos.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin: 0 18% 0 3%; }
+    .hide .for_inf p {
+      padding: 20px 15px 0px 15px; }
+  .hide .for_help {
+    font-size: 12px;
+    font-family: Arial,Helvetica,sans-serif;
+    float: none;
+    height: 100px;
+    visibility: hidden;
+    cursor: default;
+    background-image: url(../pics/ind/sas.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+    .hide .for_help p {
+      padding: 35px 15px 0px 15px; }
+
+.head {
+  display: flex; }
+  .head .img {
+    font-size: 18px;
+    font-family: Arial,Helvetica,sans-serif;
+    display: flex;
+    float: left;
+    margin-right: 4%;
+    padding: 0 0;
+    margin-right: 40%;
+    height: 100px;
+    margin-left: 4%; }
+  .head .inf-h {
+    font-size: 18px;
+    font-family: Arial,Helvetica,sans-serif;
+    display: flex;
+    float: left;
+    margin-right: 4%;
+    padding: 2.5% 2%;
+    margin-right: 0px;
+    margin-left: 18%; }
+    .head .inf-h p:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+  .head .help-h {
+    font-size: 18px;
+    font-family: Arial,Helvetica,sans-serif;
+    display: flex;
+    float: left;
+    margin-right: 4%;
+    padding: 2.5% 2%;
+    margin-right: 0px;
+    margin-left: 3%; }
+    .head .help-h p:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+
+.undo_head {
+  height: 2px;
+  background: black; }
+
+.main_inf {
+  line-height: 200px;
+  text-align: center; }
+  .main_inf .base {
+    font: small-caps bold 45px/1.5 Arial,Helvetica,sans-serif;
+    color: white;
+    float: left;
+    display: inline-block;
+    margin: 5% 10%;
+    line-height: 180px;
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-image: url(../pics/ind/1.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  .main_inf :hover {
+    cursor: pointer; }
+  .main_inf .more {
+    padding-top: 50px;
+    font: small-caps bold 45px/1.5 Arial,Helvetica,sans-serif;
+    color: white;
+    float: right;
+    display: inline-block;
+    margin: 5% 10%;
+    line-height: 50px;
+    width: 30%;
+    height: 150px;
+    border-radius: 20px;
+    background-image: url(../pics/ind/2.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  .main_inf :hover {
+    cursor: pointer; }
+  .main_inf .cov {
+    font: small-caps bold 45px/1.5 Arial,Helvetica,sans-serif;
+    color: white;
+    float: left;
+    display: inline-block;
+    margin: 5% 10%;
+    line-height: 200px;
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-image: url(../pics/ind/3.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  .main_inf :hover {
+    cursor: pointer; }
+  .main_inf .ex {
+    font: small-caps bold 45px/1.5 Arial,Helvetica,sans-serif;
+    color: white;
+    float: none;
+    display: inline-block;
+    margin: 5% 10%;
+    line-height: 200px;
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-image: url(../pics/ind/4.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  .main_inf :hover {
+    cursor: pointer; }
+
+.maybe .lowdown {
+  background-image: url(../pics/ind/ocr.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  justify-content: center;
+  margin: 0% 5%; }
+  .maybe .lowdown .header {
+    font: bold 45px/1.5 Arial,Helvetica,sans-serif;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    float: left;
+    cursor: default; }
+  .maybe .lowdown .all_the_text {
+    font: bold 20px/1.5 Arial,Helvetica,sans-serif;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding: 10% 0 8% 0;
+    cursor: default; }
+
+.music {
+  width: 90%;
+  margin: 5% 0%; }
+  .music .ease-L {
+    transform: translate(140px);
+    opacity: 0; }
+    .music .ease-L p {
+      float: left;
+      margin-left: 10%;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+      line-height: 35px;
+      font-size: 25px;
+      text-align: center;
+      cursor: default;
+      padding: 36px 0px; }
+  .music .ease-R {
+    transform: translate(140px);
+    opacity: 0; }
+    .music .ease-R img {
+      float: right;
+      margin-left: 0%;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+      line-height: 35px;
+      font-size: 25px;
+      text-align: center;
+      cursor: default; }
+  .music .hard-L {
+    transform: translate(-140px);
+    opacity: 0; }
+    .music .hard-L img {
+      float: left;
+      margin-left: 10%;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+      line-height: 35px;
+      font-size: 25px;
+      text-align: center;
+      cursor: default; }
+  .music .hard-R {
+    transform: translate(-140px);
+    opacity: 0; }
+    .music .hard-R p {
+      float: none;
+      margin-left: 0%;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+      line-height: 35px;
+      font-size: 25px;
+      text-align: center;
+      cursor: default;
+      padding: 15px 0px; }
+
+.tabs {
+  margin: 10% 0%; }
+  .tabs .text {
+    float: left;
+    font-size: 25px;
+    width: 15%;
+    height: auto;
+    margin-left: 35%;
+    padding: 4% 0%;
+    cursor: default; }
+  .tabs .down_img img {
+    transform: scale(0.5);
+    width: 15%;
+    height: auto; }
+
+/*# sourceMappingURL=for_index.css.map */
