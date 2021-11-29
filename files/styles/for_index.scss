@@ -17,16 +17,37 @@
 	margin-right: 4%;
 	padding: $pad;
 	margin-right: $adm;}
-@mixin main ($float, $line, $high) {
-	font: small-caps bold 45px/1.5 Arial,Helvetica,sans-serif;
+@mixin main ($f) {
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: Arial,Helvetica,sans-serif;
 	color: white;
-	float: $float;
+	font-size: 45px;
+
+	float: $f;
     display: inline-block;
+
 	margin: 5% 10%;
-	line-height: $line;
+	line-height: 400%;
     width: 30%;
-    height: $high;
-	border-radius: 20px;}
+	border-radius: 20px;
+
+	&:hover {cursor: pointer;};};
+@mixin main-small () {
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: Arial,Helvetica,sans-serif;
+	color: white;
+	font-size: 25px;
+
+	float: none;
+    display: inline-block;
+
+	line-height: 400%;
+    width: 70%;
+	border-radius: 20px;
+
+	&:hover {cursor: pointer;};}
 @mixin music ($float, $mar,) {
 	float: $float;
 	margin-left: $mar;
@@ -76,25 +97,23 @@
 	height: 2px;
 	background: black;}
 .main_inf{
-	line-height: 200px;
     text-align: center;
 	.base{
-		@include main(left, 180px, 200px);
+		@include main(left);
 		@include back(url(../pics/ind/1.jpg));
-	}:hover {cursor: pointer;};
+	}
 	.more{
-		padding-top: 50px;
-		@include main(right, 50px, 150px);
+		@include main(right);
 		@include back(url(../pics/ind/2.jpg));
-	}:hover {cursor: pointer;};
+	}
 	.cov{
-		@include main(left, 200px, 200px);
+		@include main(left);
 		@include back(url(../pics/ind/3.jpg));
-	}:hover {cursor: pointer;};
+	}
 	.ex{
-		@include main(none, 200px, 200px);
+		@include main(none);
 		@include back(url(../pics/ind/4.jpg));
-	}:hover {cursor: pointer;};}
+	}}
 .maybe {
 	.lowdown{
 		@include back(url(../pics/ind/ocr.jpg));
@@ -104,20 +123,19 @@
 		.header{
 			font: bold 45px/1.5 Arial,Helvetica,sans-serif;
 			width: 50%;
+			padding-top: 10%;
 			display: flex;
 			justify-content: center;
-			vertical-align: middle;
-			text-align: center;
 			float: left;
 			cursor: default;
 
 		}
-		.all_the_text{
+		.all_the_text:after{
+			content: "Задачей данного проекта является предоставление возможности обучиться игре на гитаре в домашних условиях. В разделах используются табулатуры, которые можно просмотреть отдельно по ссылке ниже. Проект также включает раздел с упражнениями для совершенствования своих навыков и список рекомендованной музыки для тех, кто ещё только начинает приобщаться к музыкальному искусству. Информация, использующаяся в разделах, получена в результате года обучения с репетитором, поэтому знания основаны на личном опыте.";
 			font: bold 20px/1.5 Arial,Helvetica,sans-serif;
 			width: 40%;
 			display: flex;
 			justify-content: center;
-			vertical-align: middle;
 			padding-top: 20px;
 			padding: 10% 0 8% 0;
 			cursor: default;
@@ -172,3 +190,37 @@
 			height: auto;
 		}
 	}}
+
+@media (max-width:1200px) {
+	.hide, .head, .undohead{display: none};
+	.main_inf{
+	    text-align: center;
+		.base{
+			@include main-small();
+			@include back(url(../pics/ind/1.jpg));
+		}
+		.more{
+			@include main-small();
+			@include back(url(../pics/ind/2.jpg));
+		}
+		.cov{
+			@include main-small();
+			@include back(url(../pics/ind/3.jpg));
+		}
+		.ex{
+			@include main-small();
+			@include back(url(../pics/ind/4.jpg));
+		}
+	}
+	.maybe{
+		.lowdown{
+			.header{
+				font: bold 25px/1.5 Arial,Helvetica,sans-serif;
+			}
+			.all_the_text:after{
+				font: bold 13px/1.5 Arial,Helvetica,sans-serif;
+				content: "Задачей данного проекта является предоставление возможности обучиться игре на гитаре в домашних условиях."
+			}
+		}
+	}
+}

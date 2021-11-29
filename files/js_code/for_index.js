@@ -50,11 +50,6 @@ $(function(){
 	 	.click(function() { location.href = 'files/main/cover.html'});
 	 $('.ex')
 	 	.click(function() { location.href = 'files/main/ex.html'});
-	 
-	 $('.header')
-	 	.css('padding-top', function() {
-	 		return $('.all_the_text').innerHeight()/4;
-	 });
 
 	$(window).scroll(function(){
 		if($(window).scrollTop()>950){
