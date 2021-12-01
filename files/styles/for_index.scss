@@ -48,17 +48,15 @@
 	border-radius: 20px;
 
 	&:hover {cursor: pointer;};}
-@mixin music ($float, $mar,) {
+@mixin music ($float, $mar, $font, $pad) {
 	float: $float;
 	margin-left: $mar;
 	width: 45%;
 	display: flex;
-	justify-content: center;
-	vertical-align: middle;
-	line-height: 35px;
-	font-size: 25px;
+	font-size: $font;
 	text-align: center;
-	cursor: default;}
+	cursor: default;
+	padding-top: $pad;}
 
 .hide {
 	z-index: 99999;
@@ -117,9 +115,7 @@
 .maybe {
 	.lowdown{
 		@include back(url(../pics/ind/ocr.jpg));
-		justify-content: center;
 		margin: 0% 5%;
-
 		.header{
 			font: bold 45px/1.5 Arial,Helvetica,sans-serif;
 			width: 50%;
@@ -135,44 +131,43 @@
 			font: bold 20px/1.5 Arial,Helvetica,sans-serif;
 			width: 40%;
 			display: flex;
-			justify-content: center;
-			padding-top: 20px;
-			padding: 10% 0 8% 0;
+			padding: 10% 0 11% 0;
 			cursor: default;
 		}
 	}}
 .music {
-		width: 90%;
-		margin: 5% 0%;
+	width: 90%;
+	margin: 5% 0%;
+	.pare{align-items: center;
 		.ease-L {
 			transform:translate(140px); opacity:0;
 			p{
-				@include music (left, 10%);
-				padding: 36px 0px;
-
+				@include music (left, 10%, 20px, 15px);
 			}
 		}
 		.ease-R {
 			transform:translate(140px); opacity:0;
 			img{
-				@include music (right, 0%);
-
+				@include music (none, 0%, 0px, 0px);
 			}
 		}
-	
+	}
+	.pare{align-items: center;
 		.hard-L {
 			transform:translate(-140px); opacity:0;
 			img{
-				@include music (left, 10%);
+				@include music (left, 10%, 0px, 0px);
 			}
 		}
 		.hard-R {
 			transform:translate(-140px); opacity:0;
 			p{
-				@include music (none, 0%);
-				padding: 15px 0px;
+				@include music (none, 0%, 20px, 15px);
+				padding-left: 5px;
 			}
-		}}
+		}
+	}
+}
 .tabs {
 	margin: 10% 0%;
 	.text{
@@ -192,7 +187,7 @@
 	}}
 
 @media (max-width:1200px) {
-	.hide, .head, .undohead{display: none};
+	.hide, .head, .undo_head{display: none};
 	.main_inf{
 	    text-align: center;
 		.base{
@@ -219,8 +214,28 @@
 			}
 			.all_the_text:after{
 				font: bold 13px/1.5 Arial,Helvetica,sans-serif;
+				padding-bottom: 1%;
 				content: "Задачей данного проекта является предоставление возможности обучиться игре на гитаре в домашних условиях."
 			}
+		}
+	}
+
+	.tabs{
+		.text{
+			font-size: 15px;
+			width: 20%;
+			margin-right: 5%;
+		}
+	}
+}
+
+@media (max-width:500px) {
+	.all_the_text{
+		padding-bottom: 13%;
+	}
+	.tabs{
+		.text{
+			font-size: 10px;
 		}
 	}
 }

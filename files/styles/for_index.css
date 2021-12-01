@@ -168,7 +168,6 @@
   background-image: url(../pics/ind/ocr.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  justify-content: center;
   margin: 0% 5%;
 }
 .maybe .lowdown .header {
@@ -185,9 +184,7 @@
   font: bold 20px/1.5 Arial, Helvetica, sans-serif;
   width: 40%;
   display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  padding: 10% 0 8% 0;
+  padding: 10% 0 11% 0;
   cursor: default;
 }
 
@@ -195,71 +192,68 @@
   width: 90%;
   margin: 5% 0%;
 }
-.music .ease-L {
+.music .pare {
+  align-items: center;
+}
+.music .pare .ease-L {
   transform: translate(140px);
   opacity: 0;
 }
-.music .ease-L p {
+.music .pare .ease-L p {
   float: left;
   margin-left: 10%;
   width: 45%;
   display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  line-height: 35px;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   cursor: default;
-  padding: 36px 0px;
+  padding-top: 15px;
 }
-.music .ease-R {
+.music .pare .ease-R {
   transform: translate(140px);
   opacity: 0;
 }
-.music .ease-R img {
-  float: right;
-  margin-left: 0%;
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  line-height: 35px;
-  font-size: 25px;
-  text-align: center;
-  cursor: default;
-}
-.music .hard-L {
-  transform: translate(-140px);
-  opacity: 0;
-}
-.music .hard-L img {
-  float: left;
-  margin-left: 10%;
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  line-height: 35px;
-  font-size: 25px;
-  text-align: center;
-  cursor: default;
-}
-.music .hard-R {
-  transform: translate(-140px);
-  opacity: 0;
-}
-.music .hard-R p {
+.music .pare .ease-R img {
   float: none;
   margin-left: 0%;
   width: 45%;
   display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  line-height: 35px;
-  font-size: 25px;
+  font-size: 0px;
   text-align: center;
   cursor: default;
-  padding: 15px 0px;
+  padding-top: 0px;
+}
+.music .pare {
+  align-items: center;
+}
+.music .pare .hard-L {
+  transform: translate(-140px);
+  opacity: 0;
+}
+.music .pare .hard-L img {
+  float: left;
+  margin-left: 10%;
+  width: 45%;
+  display: flex;
+  font-size: 0px;
+  text-align: center;
+  cursor: default;
+  padding-top: 0px;
+}
+.music .pare .hard-R {
+  transform: translate(-140px);
+  opacity: 0;
+}
+.music .pare .hard-R p {
+  float: none;
+  margin-left: 0%;
+  width: 45%;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  cursor: default;
+  padding-top: 15px;
+  padding-left: 5px;
 }
 
 .tabs {
@@ -281,7 +275,7 @@
 }
 
 @media (max-width: 1200px) {
-  .hide, .head, .undohead {
+  .hide, .head, .undo_head {
     display: none;
   }
 
@@ -366,7 +360,23 @@
   }
   .maybe .lowdown .all_the_text:after {
     font: bold 13px/1.5 Arial, Helvetica, sans-serif;
+    padding-bottom: 1%;
     content: "Задачей данного проекта является предоставление возможности обучиться игре на гитаре в домашних условиях.";
+  }
+
+  .tabs .text {
+    font-size: 15px;
+    width: 20%;
+    margin-right: 5%;
+  }
+}
+@media (max-width: 500px) {
+  .all_the_text {
+    padding-bottom: 13%;
+  }
+
+  .tabs .text {
+    font-size: 10px;
   }
 }
 
