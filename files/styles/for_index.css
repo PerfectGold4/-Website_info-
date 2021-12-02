@@ -189,7 +189,7 @@
 }
 
 .music {
-  width: 90%;
+  width: 88%;
   margin: 5% 0%;
 }
 .music .pare {
@@ -201,7 +201,7 @@
 }
 .music .pare .ease-L p {
   float: left;
-  margin-left: 10%;
+  margin-left: 9%;
   width: 45%;
   display: flex;
   font-size: 20px;
@@ -232,7 +232,7 @@
 }
 .music .pare .hard-L img {
   float: left;
-  margin-left: 10%;
+  margin-left: 9%;
   width: 45%;
   display: flex;
   font-size: 0px;
@@ -275,7 +275,7 @@
 }
 
 @media (max-width: 1200px) {
-  .hide, .head, .undo_head {
+  .hide, .head, .undo_head, .music {
     display: none;
   }
 

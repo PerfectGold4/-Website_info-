@@ -136,13 +136,13 @@
 		}
 	}}
 .music {
-	width: 90%;
+	width: 88%;
 	margin: 5% 0%;
 	.pare{align-items: center;
 		.ease-L {
 			transform:translate(140px); opacity:0;
 			p{
-				@include music (left, 10%, 20px, 15px);
+				@include music (left, 9%, 20px, 15px);
 			}
 		}
 		.ease-R {
@@ -156,7 +156,7 @@
 		.hard-L {
 			transform:translate(-140px); opacity:0;
 			img{
-				@include music (left, 10%, 0px, 0px);
+				@include music (left, 9%, 0px, 0px);
 			}
 		}
 		.hard-R {
@@ -187,7 +187,7 @@
 	}}
 
 @media (max-width:1200px) {
-	.hide, .head, .undo_head{display: none};
+	.hide, .head, .undo_head, .music{display: none};
 	.main_inf{
 	    text-align: center;
 		.base{

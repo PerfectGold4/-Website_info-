@@ -134,4 +134,10 @@ section .theme img {
   padding: 1% 5% 0% 5%;
 }
 
+@media (max-width: 1200px) {
+  .head, .text, .cont, .article_head, .content {
+    font-size: 0.5em;
+  }
+}
+
 /*# sourceMappingURL=default.css.map */
