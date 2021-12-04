@@ -32,7 +32,8 @@
 	.head{
 		font: bold 50px/1.5 Arial,Helvetica,sans-serif;
 		text-align: center;
-		margin: 30px 28% 15px 37%;
+		margin: 30px 17% 15px 27%;
+		width: 50%;
 		float: left;
 		cursor: default;
 	}
@@ -58,7 +59,7 @@ article{
 .cont{
 	font: 18px/2 Arial,Helvetica,sans-serif;
 	margin: 30px 0 25px 10%;
-	width: 30%;
+	width: 40%;
 	padding: 10px 0 10px 20px;
 	.elem{
 		display: flex;
@@ -106,11 +107,11 @@ section{
 	.text, .cont, section .theme .article_head, section .theme .content {font-size: 0.8em}
 }
 @media (max-width: 900px) {
-	.header .head {font-size: 1.1em; margin: 15px 28% 15px 39%};
+	.header .head {font-size: 1.1em};
 	.text, .cont, section .theme .article_head, section .theme .content {font-size: 0.7em}
 }
 
 @media (max-width: 600px) {
-	.header .head {font-size: 0.9em; margin: 15px 28% 15px 37%};
+	.header .head {font-size: 0.9em};
 	.text, .cont, section .theme .article_head, section .theme .content {font-size: 0.5em}
 }
